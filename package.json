@@ -1,17 +1,19 @@
 {
-  "name": "tsed-lerna",
+  "name": "@lernaexample/root",
   "version": "1.0.0",
   "description": "",
   "author": "",
   "license": "ISC",
+  "private": true,
   "scripts": {
+    "postinstall": "npm run bootstrap",
     "build": "npm run update-index-files && lerna run build",
     "bootstrap": "lerna bootstrap",
     "update-index-files": "lerna run update-index-files",
     "prettier": "prettier --write \"packages/**/src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "lint:fix": "tslint --fix -p tsconfig.json",
-    "start": "lerna run start --stream"
+    "start:server": "lerna run start --stream --scope=@lernaexample/server"
   },
   "devDependencies": {
     "lerna": "^3.20.2",
@@ -20,5 +22,10 @@
     "typescript": "^3.8.3",
     "tslint-config-prettier": "^1.18.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  }
 }
