@@ -1,0 +1,24 @@
+{
+  "name": "tsed-lerna",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "npm run update-index-files && lerna run build",
+    "bootstrap": "lerna bootstrap",
+    "update-index-files": "lerna run update-index-files",
+    "prettier": "prettier --write \"packages/**/src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "lint:fix": "tslint --fix -p tsconfig.json",
+    "start": "lerna run start --stream"
+  },
+  "devDependencies": {
+    "lerna": "^3.20.2",
+    "prettier": "^2.0.5",
+    "tslint": "^6.1.2",
+    "typescript": "^3.8.3",
+    "tslint-config-prettier": "^1.18.0"
+  },
+  "dependencies": {}
+}

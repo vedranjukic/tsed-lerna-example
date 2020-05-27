@@ -1,0 +1,30 @@
+{
+  "name": "@lernaexample/public-api",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && tsc --build tsconfig.compile.json",
+    "update-index-files": "cti create src"
+  },
+  "dependencies": {
+    "@tsed/common": "5.54.3",
+    "@tsed/core": "5.54.3",
+    "@tsed/di": "5.54.3",
+    "swagger-schema-official": "^2.0.0-bab6bed",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.4",
+    "create-ts-index": "1.12.0",
+    "install": "^0.13.0",
+    "npm": "^6.14.5",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.8.3"
+  }
+}
