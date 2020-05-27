@@ -1,7 +1,8 @@
 {
+  "npmClient": "yarn",
+  "useWorkspaces": true,
   "packages": [
-    "packages/*",
-    "examples/*"
+    "packages/*"
   ],
   "command": {
     "bootstrap": {
